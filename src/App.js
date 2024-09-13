@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Games from './pages/Games.jsx';
+import Game from './pages/Game.jsx';
+import Charades from './pages/Charades.jsx';
+import Words from './pages/Words.jsx';
+import TicTacToe from './pages/Tic-Tac-Toe.jsx';
+import FourPicsOneWord from './pages/FourPicsOneWord.jsx';
+import Pong from './pages/Pong.jsx';
+import PageNotFound from './pages/PageNotFound.jsx';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+    <Routes>
+    <Route path="/Games" element={<Games />} />
+          <Route path="/Game" element={<Game />} />
+          <Route
+            path="*"
+            element={
+              <PageNotFound />
+            }
+          />
+      <Route path="/Charades" element={<Charades />} />
+      <Route path="/Words" element={<Words />} />
+      <Route path="/TicTacToe" element={<TicTacToe />} />
+      <Route path="/FourPicsOneWord" element ={<FourPicsOneWord />} />
+      <Route path="/Pong" element={<Pong />} />
+    </Routes>
+    </Router>
   );
 }
 
