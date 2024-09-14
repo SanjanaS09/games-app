@@ -2,8 +2,8 @@
 
 * {
     font-family: Montserrat;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     user-select: none;
 }
 
@@ -14,17 +14,11 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 * {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 .Games {
-    /* background-image: url("../assets/backgroungImage.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
@@ -33,58 +27,74 @@
     background-color: #f6f4f1;
 }
 
-.GamesLogo {
-  width: 50vw;
-  max-width: 300px;
-  height: auto;
-  align-self: center;
-  justify-self: center;
-}
-
 .GamesTitle {
     width: 100vw;
     text-align: center;
-    margin: 35px 0px 35px 0px;
+    margin: 35px 0;
     font-size: 64px;
     line-height: 64px;
     font-weight: bold;
 }
 
 .GamesContainer {
-    width: 100vw;
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between the grid items */
     justify-content: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
-    text-decoration: none;
+    padding: 0 20px;
+    margin-top: 20px;
 }
 
-.GamesCover {
-    width: 90vw;
-    height: auto;
-    margin: 5vw;
+.GameCard {
+    width: 45vw;
+    height: 25vh;
     border-radius: 25px;
     filter: brightness(0.9);
     box-shadow: 0px 0px 15px #00000075;
-    text-decoration: none;
-    margin-bottom: 50px;
-
-}
-
-.GamesCoverTitle {
-    width: 100vw;
+    transition: transform 0.3s;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: 900;
     text-align: center;
-    color: #001E3A;
-    z-index: 1;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 28px;
-    text-decoration: none;
+    text-decoration: none; 
 }
 
-.GamesContainer Link {
+.GameCard:hover {
+    transform: scale(1.05); 
+}
+
+.GamesContainer a {
     text-decoration: none;
+    color: inherit; 
+}
+
+.NHIE {
+    background-image: radial-gradient(#001E3A 0%, #40607D 110%);
+}
+
+.WIMLT {
+    background-image: radial-gradient(#E89900 0%, #B40000 110%);
+}
+
+.TOT {
+    background-image: radial-gradient(#013A00 0%, #407D58 110%);
+}
+
+.MTW {
+    background-image: radial-gradient(#f07167 0%, #4d1948 110%);
+}
+
+.CH {
+    background-image: radial-gradient(#0680c2 0%, #031a46 110%);
+}
+
+.TicTacToe {
+    background-image: radial-gradient(#26c8a2 0%, #0c3b30 110%);
+}
+
+.FourPicsOneWord {
+    background-image: radial-gradient(#99bcc4 0%, #02333c 110%);
 }

@@ -4,7 +4,7 @@ import Games from './pages/Games.jsx';
 import Game from './pages/Game.jsx';
 import Charades from './pages/Charades.jsx';
 import Words from './pages/Words.jsx';
-import TicTacToe from './pages/Tic-Tac-Toe.jsx';
+import TicTacToe from './pages/TicTacToe.jsx';
 import FourPicsOneWord from './pages/FourPicsOneWord.jsx';
 import Pong from './pages/Pong.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';

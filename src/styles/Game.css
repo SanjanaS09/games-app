@@ -134,11 +134,12 @@ pre {
 }
 
 .MTW {
-    background-image: radial-gradient(#c826bb 0%, #4d1948 110%);
+    background-image: radial-gradient(#f07167 0%, #4d1948 110%);
 }
 .CH {
-    background-image: radial-gradient(#26c8a2 0%, #0c3b30 110%);
+    background-image: radial-gradient(#0680c2 0%, #031a46  110%);
 }
+
 
 /*
 .game-container {

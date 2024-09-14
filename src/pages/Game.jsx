@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import "../styles/Game.css";
 
+
 const Game = () => {
     const location = useLocation();
     const navigate = useNavigate(); // Hook to navigate programmatically
@@ -259,7 +260,7 @@ const Game = () => {
         };
 
         const statements = getStatementsArray();
-        const randomSequence = statements.sort(() => Math.random() - 0.5); // Shuffle the array
+        const randomSequence = statements.sort(() => Math.random() - 0.5); 
         setSequence(randomSequence);
     }, [gameType, neverHaveIEverStatements, mostLikelyToStatements, thisOrThatQuestions, matchTheWord, Charades]);
 

@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.TTT-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+}
+
+.exit-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.TTT-card {
+  color: #FFF4E6;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px #24242495;
+  text-align: center;
+  max-width: 400px;
+  font-size: 32px;
+  width: 90vw;
+  height: 126vw;
+  max-height: 90vh;
+  background-image: radial-gradient(#26c8a2 0%, #0c3b30 110%);
+}
+
+.board {
+  margin-top: 60px;
+  border: none;
+  background: none; /* Slightly transparent background */
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 4px;
+}
+
+.squares {
+  background-color: transparent; /* Removed white background */
+  font-size: 61px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid rgba(13, 68, 50,0.5); 
+  transition: background-color 0.3s ease;
+}
+
+.squares:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Subtle hover effect */
+}
+
+.X {
+  color:rgb(237, 255, 245);
+}
+.O {
+  color: rgb(13, 68, 50);
+}
+
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+h3 {
+  padding: 2px;
+}
+
+.restart-button {
+  background: none;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.restart-button:hover {
+  background: transparent;
+}
+
+@media screen and (max-width:450px){
+  body {
+    font-size: 9px;
+    padding: 2rem;
+    min-width: 70vw;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .board {
+    width: 350px;
+    height: 350px;
+  }
+
+  .squares {
+    font-size: 2rem;
+  }
+}

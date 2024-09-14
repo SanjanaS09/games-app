@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+import '../styles/FourPicsOneWord.css'
 
 const App = () => {
+  const navigate = useNavigate();
+
   const wordData = [
     {
       word: "BAT",
@@ -25,8 +29,8 @@ const App = () => {
       images: [
         "https://images.pexels.com/photos/6711834/pexels-photo-6711834.jpeg?auto=compress&cs=tinysrgb&w=400",  // Sound a dog makes
         "https://images.pexels.com/photos/14494660/pexels-photo-14494660.jpeg?auto=compress&cs=tinysrgb&w=400",  // Outer covering of a tree
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Barking_up_the_wrong_tree.jpg/800px-Barking_up_the_wrong_tree.jpg",  // To speak sharply
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Bark_Bark_Bark.jpg/800px-Bark_Bark_Bark.jpg",  // Sound
+        "https://images.pexels.com/photos/28397743/pexels-photo-28397743/free-photo-of-olympus-digital-camera.jpeg?auto=compress&cs=tinysrgb&w=400",  // To speak sharply
+        "https://images.pexels.com/photos/3042579/pexels-photo-3042579.jpeg?auto=compress&cs=tinysrgb&w=400",  // Sound
       ],
     },
     {
@@ -35,43 +39,70 @@ const App = () => {
         "https://images.pexels.com/photos/157554/pexels-photo-157554.jpeg?auto=compress&cs=tinysrgb&w=400",  // Jewelry
         "https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&cs=tinysrgb&w=400",  // Sound of a bell
         "https://images.pexels.com/photos/18386859/pexels-photo-18386859/free-photo-of-smartphone-and-coffee-on-table.jpeg?auto=compress&cs=tinysrgb&w=400",  // Smartphone notification
-        "https://images.pexels.com/photos/1050312/pexels-photo-1050312.jpeg?auto=compress&cs=tinysrgb&w=400",  // Group of people
+        "https://images.pexels.com/photos/674248/pexels-photo-674248.jpeg?auto=compress&cs=tinysrgb&w=400",  // Group of people
       ],
     },
     {
       word: "MINT",
       images: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Mint_plant.jpg/800px-Mint_plant.jpg",  // Plant
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Mint_Factory.jpg/800px-Mint_Factory.jpg",  // To produce coins
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Fresh_Mint.jpg/800px-Fresh_Mint.jpg",  // Freshness
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Mint_Leaf.jpg/800px-Mint_Leaf.jpg",  // Flavor
+        "https://images.pexels.com/photos/1264000/pexels-photo-1264000.jpeg?auto=compress&cs=tinysrgb&w=400",  // Plant
+        "https://images.pexels.com/photos/4457151/pexels-photo-4457151.jpeg?auto=compress&cs=tinysrgb&w=400",  // To produce coins
+        "https://images.pexels.com/photos/4465125/pexels-photo-4465125.jpeg?auto=compress&cs=tinysrgb&w=400",  // Freshness
+        "https://images.pexels.com/photos/1289363/pexels-photo-1289363.jpeg?auto=compress&cs=tinysrgb&w=400Leaf.jpg",  // Flavor
       ],
     },
     {
-      word: "WAVE",
+      word: "NAIL",
       images: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ocean_wave.jpg/800px-Ocean_wave.jpg",  // Movement of the sea
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Hand_wave.jpg/800px-Hand_wave.jpg",  // To move hand
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Beach_wave.jpg/800px-Beach_wave.jpg",  // Surface waves
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Goodbye_wave.jpg/800px-Goodbye_wave.jpg",  // Greeting
+        "https://images.pexels.com/photos/16683304/pexels-photo-16683304/free-photo-of-woman-holding-mortarboard.jpeg?auto=compress&cs=tinysrgb&w=400",  // Movement of the sea
+        "https://images.pexels.com/photos/3557600/pexels-photo-3557600.jpeg?auto=compress&cs=tinysrgb&w=400",  // To move hand
+        "https://images.pexels.com/photos/190101/pexels-photo-190101.jpeg?auto=compress&cs=tinysrgb&w=400",  // Surface waves
+        "https://images.pexels.com/photos/7714894/pexels-photo-7714894.jpeg?auto=compress&cs=tinysrgb&w=400",  // Greeting
       ],
     },
     {
       word: "LIGHT",
       images: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Light_bulb.jpg/800px-Light_bulb.jpg",  // Illumination
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Lightweight_luggage.jpg/800px-Lightweight_luggage.jpg",  // Not heavy
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Flame_light.jpg/800px-Flame_light.jpg",  // To ignite
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Light_refraction.jpg/800px-Light_refraction.jpg",  // Refraction
+        "https://images.pexels.com/photos/921294/pexels-photo-921294.png?auto=compress&cs=tinysrgb&w=400",  // Illumination
+        "https://images.pexels.com/photos/1330029/pexels-photo-1330029.jpeg?auto=compress&cs=tinysrgb&w=400",  // Not heavy
+        "https://images.pexels.com/photos/65590/sparks-fireworks-welding-industrial-65590.jpeg?auto=compress&cs=tinysrgb&w=400",  // To ignite
+        "https://images.pexels.com/photos/6872151/pexels-photo-6872151.jpeg?auto=compress&cs=tinysrgb&w=400",  // Refraction
       ],
     },
     {
       word: "DRAW",
       images: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Drawn_pencil.jpg/800px-Drawn_pencil.jpg",  // To produce a picture
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Draw_curtain.jpg/800px-Draw_curtain.jpg",  // To pull something
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Draw_game.jpg/800px-Draw_game.jpg",  // Draw in a game
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Draw_student.jpg/800px-Draw_student.jpg",  // Academic drawing
+        "https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=400",  // To produce a picture
+        "https://images.pexels.com/photos/5699376/pexels-photo-5699376.jpeg?auto=compress&cs=tinysrgb&w=400",  // To pull something
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE0FWze9aNDvgjc4HPoZXjsr6A4bMuXrcG7g&s",  // Draw in a game
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQafOE9ozwT-ofJCC1BMLf5CXfatwwfqvsOZQ&s",  // Academic drawing
+      ],
+    },
+    {
+      word: "CRANE",
+      images: [
+        "https://images.pexels.com/photos/624061/pexels-photo-624061.jpeg?auto=compress&cs=tinysrgb&w=400",  // Bird
+        "https://images.pexels.com/photos/259870/pexels-photo-259870.jpeg?auto=compress&cs=tinysrgb&w=400",  // Machine
+        "https://images.pexels.com/photos/25525975/pexels-photo-25525975/free-photo-of-man-controlling-camcorder-on-crane.jpeg?auto=compress&cs=tinysrgb&w=400",  // Camera equipment
+        "https://images.pexels.com/photos/18499286/pexels-photo-18499286/free-photo-of-sunset-crane.jpeg?auto=compress&cs=tinysrgb&w=400",  // Movement
+      ],
+    },
+    {
+      word: "SCALE",
+      images: [
+        "https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=400",  // Weighing device
+        "https://images.pexels.com/photos/3338498/pexels-photo-3338498.jpeg?auto=compress&cs=tinysrgb&w=400",  // Outer covering of fish
+        "https://images.pexels.com/photos/17653245/pexels-photo-17653245/free-photo-of-man-climbing-on-stony-wall.jpeg?auto=compress&cs=tinysrgb&w=400",  // To climb
+        "https://images.pexels.com/photos/3988555/pexels-photo-3988555.jpeg?auto=compress&cs=tinysrgb&w=400",  // Measurement tool
+      ],
+    },
+    {
+      word: "LEAD",
+      images: [
+        "https://images.pexels.com/photos/290150/pexels-photo-290150.jpeg?auto=compress&cs=tinysrgb&w=400",  // Metal
+        "https://images.pexels.com/photos/66100/pexels-photo-66100.jpeg?auto=compress&cs=tinysrgb&w=400",  // To guide
+        "https://images.pexels.com/photos/1237647/pexels-photo-1237647.jpeg?auto=compress&cs=tinysrgb&w=400",  // Chemistry
+        "https://www.vedantu.com/seo/content-images/099b2dc1-637a-4ad4-bc8f-3524bdec60ab.png",  // Projectiles
       ],
     },
     {
@@ -81,24 +112,6 @@ const App = () => {
         "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Tired_person.jpg/800px-Tired_person.jpg",  // To become exhausted
         "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Worn_tire.jpg/800px-Worn_tire.jpg",  // Wear and tear
         "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Tire_tread.jpg/800px-Tire_tread.jpg",  // Tread pattern
-      ],
-    },
-    {
-      word: "CRANE",
-      images: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crane_bird.jpg/800px-Crane_bird.jpg",  // Bird
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Crane_construction.jpg/800px-Crane_construction.jpg",  // Machine
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Camera_crane.jpg/800px-Camera_crane.jpg",  // Camera equipment
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Crane_movement.jpg/800px-Crane_movement.jpg",  // Movement
-      ],
-    },
-    {
-      word: "SCALE",
-      images: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Scale.jpg/800px-Scale.jpg",  // Weighing device
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Fish_scale.jpg/800px-Fish_scale.jpg",  // Outer covering of fish
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Scale_climb.jpg/800px-Scale_climb.jpg",  // To climb
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Scale_tool.jpg/800px-Scale_tool.jpg",  // Measurement tool
       ],
     },
     {
@@ -119,15 +132,7 @@ const App = () => {
         "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Yard_sale.jpg/800px-Yard_sale.jpg",  // Sale
       ],
     },
-    {
-      word: "LEAD",
-      images: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Lead_metal.jpg/800px-Lead_metal.jpg",  // Metal
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Lead_person.jpg/800px-Lead_person.jpg",  // To guide
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Lead_chemistry.jpg/800px-Lead_chemistry.jpg",  // Chemistry
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Lead_shot.jpg/800px-Lead_shot.jpg",  // Projectiles
-      ],
-    },
+    
     {
       word: "ADDRESS",
       images: [
@@ -138,7 +143,7 @@ const App = () => {
       ],
     },
   ];
-    
+
   const [currentIndex, setCurrentIndex] = useState(0); // Track current word index
   const [userInput, setUserInput] = useState(""); // Track user input
   const [letterStatus, setLetterStatus] = useState([]); // Track letter status
@@ -146,19 +151,18 @@ const App = () => {
   const currentWord = wordData[currentIndex].word;
   const currentImages = wordData[currentIndex].images;
 
-  // Initialize letter status and user input when word changes
+  
   useEffect(() => {
-    setLetterStatus(currentWord.split('').map(() => '')); // Empty strings for initial status
-    setUserInput(''); // Clear user input
+    setLetterStatus(currentWord.split('').map(() => '')); 
+    setUserInput(''); 
   }, [currentIndex, currentWord]);
 
-  // Function to handle letter input
   const handleLetterChange = (index, letter) => {
     const newStatus = [...letterStatus];
     const newUserInput = userInput.split('');
     newUserInput[index] = letter;
     setUserInput(newUserInput.join(''));
-    
+
     if (letter.toUpperCase() === currentWord[index]) {
       newStatus[index] = 'correct';
     } else {
@@ -167,55 +171,72 @@ const App = () => {
     setLetterStatus(newStatus);
   };
 
-  // Function to go to the next word
   const nextWord = () => {
-    setLetterStatus([]); // Reset letter status
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % wordData.length); // Move to next word
+    setLetterStatus([]);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % wordData.length); 
   };
 
+  const handleExit = () => {
+    navigate('/Games'); 
+
   return (
-    <div style={{ textAlign: "center" }}>
-      <h1>4 Pics 1 Word Game</h1>
+    <div className="FPOW-container">
+      <button className="exit-button" onClick={handleExit}>X</button>
+      <div className="FPOW-card">
+        <div style={{ textAlign: "center" }}>
 
-      {/* Image Grid */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "10px", justifyContent: "center" }}>
-        {currentImages.map((img, index) => (
-          <img key={index} src={img} alt={`pic-${index}`} style={{ width: "150px", height: "150px" }} />
-        ))}
-      </div>
-
-      {/* Letter Boxes */}
-      <div style={{ margin: "20px" }}>
-        {currentWord.split('').map((letter, index) => (
-          <input
-            key={index}
-            type="text"
-            maxLength={1}
-            value={userInput[index] || ''} // Bind input value to userInput
-            onChange={(e) => handleLetterChange(index, e.target.value)}
-            style={{
-              width: "40px",
-              height: "40px",
-              textAlign: "center",
-              fontSize: "24px",
-              margin: "5px",
-              border: `2px solid ${letterStatus[index] === 'correct' ? 'green' : letterStatus[index] === 'incorrect' ? 'red' : 'gray'}`,
-              boxSizing: "border-box",
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Result */}
-      <div>
-        {letterStatus.every((status, index) => status === 'correct') && (
-          <div>
-            <h2 style={{ color: "green" }}>Correct! The word is {currentWord}</h2>
-            <button onClick={nextWord} style={{ padding: "10px 20px", fontSize: "16px", marginTop: "10px" }}>
-              Next Word
-            </button>
+          <div className="image-grid"> 
+            {currentImages.map((img, index) => (
+              <img key={index} src={img} alt={`pic-${index}`} style={{ width: "150px", height: "150px" }} />
+            ))}
           </div>
-        )}
+
+          <div style={{ margin: "20px" }}>
+            {currentWord.split('').map((letter, index) => (
+              <input
+                key={index}
+                type="text"
+                maxLength={1}
+                value={userInput[index] || ''} 
+                onChange={(e) => handleLetterChange(index, e.target.value)}
+                style={{
+                  width: "20px",
+                  color: "#FFF4E6",
+                  height: "40px",
+                  textAlign: "center",
+                  fontSize: "24px",
+                  margin: "5px",
+                  border: "none", 
+                  background: "none", 
+                  outline: "none", 
+                  borderBottom: "2px solid #FFF4E6", 
+                }}
+                onKeyUp={(e) => {
+                  if (e.target.value.length === 1) {
+                    const nextSibling = document.querySelector(`input[name="letter-${index + 1}"]`);
+                    if (nextSibling) {
+                      nextSibling.focus();
+                    }
+                  }
+                }}
+                name={`letter-${index}`}
+              />
+            ))}
+
+          </div>
+
+          {/* Result */}
+          <div>
+            {letterStatus.every((status, index) => status === 'correct') && (
+              <div>
+                <h2 style={{ color: "#FFF4E6" }}>Correct! The word is {currentWord}</h2>
+                <button className = 'next-word' onClick={nextWord} >
+                  Next Word
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
