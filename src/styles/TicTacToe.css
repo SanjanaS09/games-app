@@ -87,7 +87,7 @@
 .board {
   margin-top: 60px;
   border: none;
-  background: none; /* Slightly transparent background */
+  background: none;
   width: 400px;
   height: 400px;
   display: grid;
@@ -96,7 +96,7 @@
 }
 
 .squares {
-  background-color: transparent; /* Removed white background */
+  background-color: transparent; 
   font-size: 61px;
   border-radius: 10px;
   cursor: pointer;
@@ -106,7 +106,7 @@
 }
 
 .squares:hover {
-  background-color: rgba(0, 0, 0, 0.1); /* Subtle hover effect */
+  background-color: rgba(0, 0, 0, 0.1); 
 }
 
 .X {

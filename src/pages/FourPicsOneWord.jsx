@@ -106,47 +106,47 @@ const App = () => {
       ],
     },
     {
-      word: "TIRE",
+      word: "CHARGE",
       images: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Tire.jpg/800px-Tire.jpg",  // Rubber covering of a wheel
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Tired_person.jpg/800px-Tired_person.jpg",  // To become exhausted
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Worn_tire.jpg/800px-Worn_tire.jpg",  // Wear and tear
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Tire_tread.jpg/800px-Tire_tread.jpg",  // Tread pattern
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/%CE%88%CF%86%CE%BF%CE%B4%CE%BF%CF%82.jpg/220px-%CE%88%CF%86%CE%BF%CE%B4%CE%BF%CF%82.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-GdAB52tjPk4dyufeyfNRTXewcF2_zVwWCA&s",  // To become exhausted
+        "https://pyxis.nymag.com/v1/imgs/195/828/feee94c1a8e831ae5fc0969648550131ac-01-battery-charge-50.rsquare.w400.jpg",  // Wear and tear
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSldrjubtgmNLICdOQPEgv5GNjU4lqCLg5Mdg&s",  // Tread pattern
       ],
     },
     {
       word: "TRACK",
       images: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Train_track.jpg/800px-Train_track.jpg",  // Path or trail
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Recording_track.jpg/800px-Recording_track.jpg",  // Recording
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Tracking_software.jpg/800px-Tracking_software.jpg",  // Monitoring
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Running_track.jpg/800px-Running_track.jpg",  // Sports track
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTIW5Rfn2YUztuoeYJV_TdsPxTVE22RkLotQ&s",  // Path or trail
+        "https://images.pexels.com/photos/1127120/pexels-photo-1127120.jpeg?auto=compress&cs=tinysrgb&w=400",  // Recording
+        "https://images.pexels.com/photos/6823392/pexels-photo-6823392.jpeg?auto=compress&cs=tinysrgb&w=400",  // Monitoring
+        "https://images.pexels.com/photos/552779/pexels-photo-552779.jpeg?auto=compress&cs=tinysrgb&w=400",  // Sports track
       ],
     },
     {
-      word: "YARD",
+      word: "PITCH",
       images: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Yard_measurement.jpg/800px-Yard_measurement.jpg",  // Unit of measurement
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Backyard.jpg/800px-Backyard.jpg",  // Piece of land
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Yard_garden.jpg/800px-Yard_garden.jpg",  // Garden
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Yard_sale.jpg/800px-Yard_sale.jpg",  // Sale
+        "https://www.earmaster.com/images/book/m10941/m10941.id165806.png",
+        "https://fcbusiness.co.uk/wp-content/uploads/2018/01/MWC-5633-Pitch-Grading-Framework.jpeg",  
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT89gxBKr0zj2cTkGZSy93dp-7jXdAkkXnKHw&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT94goe6TNj_0KyOiDugZ4ALqxSeObBvu4qxg&s",
       ],
     },
     
     {
       word: "ADDRESS",
       images: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Address_label.jpg/800px-Address_label.jpg",  // Location
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Speech_address.jpg/800px-Speech_address.jpg",  // To speak
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Address_book.jpg/800px-Address_book.jpg",  // Contact information
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Address_Envelope.jpg/800px-Address_Envelope.jpg",  // Envelope
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4X9sTyQRXRJYghCxA9eTehJ8jTplhx1-DZw&s",  // Location
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrB6CWBS1OrCqQUal_D_jckMSig48oIDf5_g&s",  // To speak
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStqvqOP31vjKTQ6jX4eFCzzRlO5j9ZspIWdQ&s",  // Contact information
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh1sn-cQMw7tK3a23mpxTSRF1LTUq_2I56AA&s",  // Envelope
       ],
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0); // Track current word index
-  const [userInput, setUserInput] = useState(""); // Track user input
-  const [letterStatus, setLetterStatus] = useState([]); // Track letter status
+  const [currentIndex, setCurrentIndex] = useState(0); 
+  const [userInput, setUserInput] = useState(""); 
+  const [letterStatus, setLetterStatus] = useState([]); 
   const [showWelcome, setShowWelcome] = React.useState(true);
   const currentWord = wordData[currentIndex].word;
   const currentImages = wordData[currentIndex].images;
@@ -245,7 +245,6 @@ const App = () => {
 
           </div>
 
-          {/* Result */}
           <div>
             {letterStatus.every((status, index) => status === 'correct') && (
               <div>
