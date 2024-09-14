@@ -98,3 +98,7 @@
 .FourPicsOneWord {
     background-image: radial-gradient(#99bcc4 0%, #02333c 110%);
 }
+
+.EQ{
+    background-image: radial-gradient(#532616 0%, rgba(188, 104, 51, 0.667) 110%);
+}

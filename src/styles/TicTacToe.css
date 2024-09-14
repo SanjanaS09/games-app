@@ -1,5 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+.welcome-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFF4E6;
+  background: radial-gradient(#26c8a2 0%, #0c3b30 110%);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  max-width: 90vw;
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  font-size: 32px;
+  font-size: x-large;
+  width: 90vw;
+  height: 126vw;
+  max-height: 90vh;
+  text-align: center;
+}
+
+.welcome-header {
+  margin-bottom: 20px;
+}
+
+.instructions {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 450px) {
+  .welcome-page {
+    padding: 15px;
+  }
+
+  .instructions {
+    font-size: 16px;
+  }
+}
+
 .TTT-container {
   position: relative;
   width: 100%;
@@ -85,7 +126,7 @@ h3 {
   padding: 2px;
 }
 
-.restart-button {
+.button {
   background: none;
   color: white;
   padding: 10px 20px;
@@ -97,7 +138,7 @@ h3 {
   transition: background 0.3s ease;
 }
 
-.restart-button:hover {
+.button:hover {
   background: transparent;
 }
 

@@ -35,8 +35,8 @@ const Games = () => {
                     <div className={`GameCard TOT`}>This Or That</div>
                 </Link>
 
-                <Link to="/TicTacToe">
-                    <div className={`GameCard TicTacToe`}>Tic Tac Toe</div>
+                <Link to="/Game?Game=EQ">
+                    <div className={`GameCard EQ`}>Emoji Quiz</div>
                 </Link>
 
                 <Link to="/Game?Game=MTW">
@@ -45,6 +45,10 @@ const Games = () => {
 
                 <Link to="/Game?Game=CH">
                     <div className={`GameCard CH`}>Charades</div>
+                </Link>
+
+                <Link to="/TicTacToe">
+                    <div className={`GameCard TicTacToe`}>Tic Tac Toe</div>
                 </Link>
 
                 <Link to="/FourPicsOneWord">

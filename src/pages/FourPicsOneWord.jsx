@@ -147,7 +147,7 @@ const App = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // Track current word index
   const [userInput, setUserInput] = useState(""); // Track user input
   const [letterStatus, setLetterStatus] = useState([]); // Track letter status
-
+  const [showWelcome, setShowWelcome] = React.useState(true);
   const currentWord = wordData[currentIndex].word;
   const currentImages = wordData[currentIndex].images;
 
@@ -178,10 +178,30 @@ const App = () => {
 
   const handleExit = () => {
     navigate('/Games'); 
+  };
+
+  const WelcomePage = ({ onStart }) => (
+    <div className="welcomeFPOW-page">
+      <div className="welcome-header">
+        <h1>Welcome to Four Pics One Word!</h1>
+      </div>
+      <p className="instructions">
+      Look at the four pictures. They all share a common word. Guess the word that describes all four images.
+      </p>
+      <button className="button" onClick={onStart}>Start Game</button>
+    </div>
+  );
+  const handleStart = () => {
+    setShowWelcome(false);
+  };
 
   return (
     <div className="FPOW-container">
       <button className="exit-button" onClick={handleExit}>X</button>
+      {showWelcome ? (
+        <WelcomePage onStart={handleStart} />
+      ) : (
+        <>
       <div className="FPOW-card">
         <div style={{ textAlign: "center" }}>
 
@@ -238,6 +258,8 @@ const App = () => {
           </div>
         </div>
       </div>
+      </>
+      )}
     </div>
   );
 };
